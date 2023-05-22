@@ -1,0 +1,1 @@
+let fix = fn f => (fn x => f (fn v => (x x) v)) (fn x => f (fn v => (x x) v)) in fix (fn rec => fn n => ifz n 0 (n + rec (n-1))) 4
